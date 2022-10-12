@@ -58,7 +58,7 @@ namespace LazyJedi.SevenZip
 
         private static bool IsArchive(string inArchive)
         {
-            if (LazyArchiver.IsArchiveExtension(Path.GetExtension(inArchive))) return true;
+            if ( LazySevenZipHelper.IsArchiveExtension(Path.GetExtension(inArchive))) return true;
             Debug.LogError($"Cannot extract from the following file - {Path.GetFileName(inArchive)}");
             return false;
         }
