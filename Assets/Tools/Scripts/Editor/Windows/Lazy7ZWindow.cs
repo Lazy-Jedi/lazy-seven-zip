@@ -30,6 +30,7 @@ namespace LazyJedi.SevenZip
 
         public void OnGUI()
         {
+            EditorGUILayout.LabelField("Work In Progress!");
         }
 
         #endregion
