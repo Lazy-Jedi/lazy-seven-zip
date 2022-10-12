@@ -7,7 +7,9 @@ namespace LazyJedi.SevenZip
     public enum ActionType
     {
         Archive,
-        Extract
+        Extract,
+        ArchivePassword,
+        ExtractPassword
     }
 
     public class Example_LazySevenZip : MonoBehaviour
@@ -15,7 +17,8 @@ namespace LazyJedi.SevenZip
         #region FIELDS
 
         public bool Button;
-        public string archivePath = @"Assets/files.7z";
+        public string ArchivePath = @"Assets/files.7z";
+        public string Password = "1234";
         public ActionType ActionType = ActionType.Archive;
         public string[] FilesAndFolders;
 
@@ -31,10 +34,16 @@ namespace LazyJedi.SevenZip
                 switch (ActionType)
                 {
                     case ActionType.Archive:
-                        await LazyArchiver.ArchiveAsync(archivePath, FilesAndFolders, OutArchiveFormat.SevenZip);
+                        await LazyArchiver.ArchiveAsync(ArchivePath, FilesAndFolders, OutArchiveFormat.SevenZip);
                         break;
                     case ActionType.Extract:
-                        await LazyExtractor.ExtractAsync("", archivePath);
+                        await LazyExtractor.ExtractAsync("", ArchivePath);
+                        break;
+                    case ActionType.ArchivePassword:
+                        await LazyArchiver.ArchiveAsync(ArchivePath, FilesAndFolders, Password, OutArchiveFormat.SevenZip);
+                        break;
+                    case ActionType.ExtractPassword:
+                        await LazyExtractor.ExtractAsync("", ArchivePath, Password);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

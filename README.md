@@ -131,7 +131,7 @@ public async Task ArchivePasswordTestAsync(string password, string[] filesToArch
 
 ## Examples - Extracting an Archive
 
-### Method 1 - Extract and Archive with no Password
+### Method 1 - Extract an Archive with no Password
 
 ```csharp
 
@@ -147,7 +147,7 @@ public async Task ExtractArchiveTestAsync(string outputPath)
 
 ```
 
-### Method 2 - Extract and Archive with a Password
+### Method 2 - Extract an Archive with a Password
 
 ```csharp
 
