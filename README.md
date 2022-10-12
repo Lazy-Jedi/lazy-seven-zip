@@ -103,12 +103,12 @@ public static async Task ExtractAsync(string outPath, string inArchive, string p
 
 public void ArchiveTest(string[] filesToArchive)
 {
-    LazyArchiver.ArchiveAsync("Assets/test.7z", filesToArchive , OutArchiveFormat.SevenZip);
+    LazyArchiver.ArchiveAsync(@"Assets/test.7z", filesToArchive , OutArchiveFormat.SevenZip);
 }
 
 public async Task ArchiveTestAsync(string[] filesToArchive)
 {
-    await LazyArchiver.ArchiveAsync(archivePath, FoldersToCompress, OutArchiveFormat.SevenZip);
+    await LazyArchiver.ArchiveAsync(@"Assets/test.7z", filesToArchive, OutArchiveFormat.SevenZip);
 }
 
 ```
@@ -117,19 +117,54 @@ public async Task ArchiveTestAsync(string[] filesToArchive)
 
 ```csharp
 
-public void ArchiveTest(string password, string[] filesToArchive)
+public void ArchivePasswordTest(string password, string[] filesToArchive)
 {
-    LazyArchiver.ArchiveAsync("Assets/test.7z", filesToArchive , password, OutArchiveFormat.SevenZip);
+    LazyArchiver.ArchiveAsync(@"Assets/test.7z", filesToArchive , password, OutArchiveFormat.SevenZip);
 }
 
-public async Task ArchiveTestAsync(string password, string[] filesToArchive)
+public async Task ArchivePasswordTestAsync(string password, string[] filesToArchive)
 {
-    await LazyArchiver.ArchiveAsync(archivePath, FoldersToCompress, password, OutArchiveFormat.SevenZip);
+    await LazyArchiver.ArchiveAsync(@"Assets/test.7z", filesToArchive, password, OutArchiveFormat.SevenZip);
+}
+
+```
+
+## Examples - Extracting an Archive
+
+### Method 1 - Extract and Archive with no Password
+
+```csharp
+
+public void ExtractArchiveTest(string outputPath)
+{
+    LazyExtractor.Extract(outputPath, @"Assets/test.7z");
+}
+
+public async Task ExtractArchiveTestAsync(string outputPath)
+{
+    await LazyExtractor.ExtractAsync(outputPath, @"Assets/test.7z");
+}
+
+```
+
+### Method 2 - Extract and Archive with a Password
+
+```csharp
+
+public void ExtractArchivePasswordTest(string outputPath, string password)
+{
+    LazyExtractor.Extract(outputPath, @"Assets/test.7z", password);
+}
+
+public async Task ExtractArchivePasswordTestAsync(string outputPath, string password)
+{
+    await LazyExtractor.ExtractAsync(outputPath, @"Assets/test.7z", password);
 }
 
 ```
 
 # Work In Progress
+
 + Editor Window to Create Archives similar to the 7zip Archive Creator Window
 
 # Credits
