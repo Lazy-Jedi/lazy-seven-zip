@@ -31,7 +31,8 @@ namespace LazyJedi.SevenZip
         #region NON-ASYNC METHODS
 
         /// <summary>
-        /// Extract an Archive.
+        /// Extract an Archive.<br/>
+        /// If no OutPath is provided, the files of the Archive will be extracted to the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outPath">Output Path of the Extracted Files</param>
         /// <param name="inArchive">Input Archive File Path</param>
@@ -56,7 +57,8 @@ namespace LazyJedi.SevenZip
         #region ASYNC METHODS
 
         /// <summary>
-        /// Extract an Archive.
+        /// Extract an Archive.<br/>
+        /// If no OutPath is provided, the files of the Archive will be extracted to the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outPath">Output Path of the Extracted Files</param>
         /// <param name="inArchive">Input Archive File Path</param>

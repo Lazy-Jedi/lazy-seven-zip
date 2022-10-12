@@ -33,9 +33,10 @@ namespace LazyJedi.SevenZip
         #region NON-ASYNC METHODS
 
         /// <summary>
-        /// Create a non encrypted archive.
+        /// Create a non encrypted archive.<br/>
+        /// If no OutArchive Path is provided, an Archive will be Created in the Temporary Folder within this Project.
         /// </summary>
-        /// <param name="outArchive">Path of the Archive that will be Created</param>
+        /// <param name="outArchive">Path of the Archive that will be Created.</param>
         /// <param name="inFiles">List of Files and Folders to Archive</param>
         /// <param name="compressionLevel"></param>
         public static void Archive(
@@ -67,7 +68,8 @@ namespace LazyJedi.SevenZip
         }
 
         /// <summary>
-        /// Create a Non-Encrypted Archive.
+        /// Create a non encrypted archive.<br/>
+        /// If no OutArchive Path is provided, an Archive will be Created in the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outArchive">Path of the Archive that will be Created</param>
         /// <param name="inFiles">List of Files and Folders to Archive</param>
@@ -102,7 +104,8 @@ namespace LazyJedi.SevenZip
         }
 
         /// <summary>
-        /// Create an Encrypted Archive.
+        /// Create an Encrypted Archive.<br/>
+        /// If no OutArchive Path is provided, an Archive will be Created in the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outArchive">Path of the Archive that will be Created</param>
         /// <param name="inFiles">List of Files and Folders to Archive</param>
@@ -141,7 +144,8 @@ namespace LazyJedi.SevenZip
         }
 
         /// <summary>
-        /// Create an Encrypted Archive.
+        /// Create an Encrypted Archive.<br/>
+        /// If no OutArchive Path is provided, an Archive will be Created in the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outArchive">Path of the Archive that will be Created</param>
         /// <param name="inFiles">List of Files and Folders to Archive</param>
@@ -185,7 +189,8 @@ namespace LazyJedi.SevenZip
         #region ASYNC METHODS
 
         /// <summary>
-        /// Create a Non-Encrypted Archive.
+        /// Create a Non-Encrypted Archive.<br/>
+        /// If no OutArchive Path is provided, an Archive will be Created in the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outArchive">Path of the Archive that will be Created</param>
         /// <param name="inFiles">List of Files and Folders to Archive</param>
@@ -220,7 +225,8 @@ namespace LazyJedi.SevenZip
         }
 
         /// <summary>
-        /// Create a Non-Encrypted Archive.
+        /// Create a Non-Encrypted Archive.<br/>
+        /// If no OutArchive Path is provided, an Archive will be Created in the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outArchive">Path of the Archive that will be Created</param>
         /// <param name="inFiles">List of Files and Folders to Archive</param>
@@ -256,7 +262,8 @@ namespace LazyJedi.SevenZip
         }
 
         /// <summary>
-        /// Create an Encrypted Archive.
+        /// Create an Encrypted Archive.<br/>
+        /// If no OutArchive Path is provided, an Archive will be Created in the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outArchive">Path of the Archive that will be Created</param>
         /// <param name="inFiles">List of Files and Folders to Archive</param>
@@ -295,7 +302,8 @@ namespace LazyJedi.SevenZip
         }
 
         /// <summary>
-        /// Create an Encrypted Archive.
+        /// Create an Encrypted Archive.<br/>
+        /// If no OutArchive Path is provided, an Archive will be Created in the Temporary Folder within this Project.
         /// </summary>
         /// <param name="outArchive">Path of the Archive that will be Created</param>
         /// <param name="inFiles">List of Files and Folders to Archive</param>

@@ -4,21 +4,20 @@ using UnityEngine;
 
 namespace LazyJedi.SevenZip
 {
-    public enum CompressType
+    public enum ActionType
     {
         Archive,
-        Extract,
-        SFX
+        Extract
     }
 
-    public class Test_Compression : MonoBehaviour
+    public class Example_LazySevenZip : MonoBehaviour
     {
         #region FIELDS
 
         public bool Button;
         public string archivePath = @"Assets/files.7z";
-        public CompressType CompressType = CompressType.Archive;
-        public string[] FoldersToCompress;
+        public ActionType ActionType = ActionType.Archive;
+        public string[] FilesAndFolders;
 
         #endregion
 
@@ -29,15 +28,13 @@ namespace LazyJedi.SevenZip
             if (Button)
             {
                 Button = false;
-                switch (CompressType)
+                switch (ActionType)
                 {
-                    case CompressType.Archive:
-                        await LazyArchiver.ArchiveAsync(archivePath, FoldersToCompress, OutArchiveFormat.SevenZip);
+                    case ActionType.Archive:
+                        await LazyArchiver.ArchiveAsync(archivePath, FilesAndFolders, OutArchiveFormat.SevenZip);
                         break;
-                    case CompressType.Extract:
+                    case ActionType.Extract:
                         await LazyExtractor.ExtractAsync("", archivePath);
-                        break;
-                    case CompressType.SFX:
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -48,10 +45,6 @@ namespace LazyJedi.SevenZip
 #endif
             }
         }
-
-        #endregion
-
-        #region METHODS
 
         #endregion
     }
