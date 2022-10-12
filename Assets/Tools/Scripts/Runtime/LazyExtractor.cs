@@ -30,6 +30,12 @@ namespace LazyJedi.SevenZip
 
         #region NON-ASYNC METHODS
 
+        /// <summary>
+        /// Extract an Archive.
+        /// </summary>
+        /// <param name="outPath">Output Path of the Extracted Files</param>
+        /// <param name="inArchive">Input Archive File Path</param>
+        /// <param name="password">Optional Password of the Archive if it Encrypted</param>
         public static void Extract(string outPath, string inArchive, string password = "")
         {
             if (string.IsNullOrEmpty(inArchive))
@@ -49,6 +55,12 @@ namespace LazyJedi.SevenZip
 
         #region ASYNC METHODS
 
+        /// <summary>
+        /// Extract an Archive.
+        /// </summary>
+        /// <param name="outPath">Output Path of the Extracted Files</param>
+        /// <param name="inArchive">Input Archive File Path</param>
+        /// <param name="password">Optional Password of the Archive if it Encrypted</param>
         public static async Task ExtractAsync(string outPath, string inArchive, string password = "")
         {
             if (string.IsNullOrEmpty(inArchive))

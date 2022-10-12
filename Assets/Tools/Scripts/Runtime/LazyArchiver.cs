@@ -184,6 +184,12 @@ namespace LazyJedi.SevenZip
 
         #region ASYNC METHODS
 
+        /// <summary>
+        /// Create a Non-Encrypted Archive.
+        /// </summary>
+        /// <param name="outArchive">Path of the Archive that will be Created</param>
+        /// <param name="inFiles">List of Files and Folders to Archive</param>
+        /// <param name="compressionLevel">Level of the Compression, by Default the Compression is set to Default.</param>
         public static async Task ArchiveAsync(
             string outArchive,
             string[] inFiles,
@@ -213,6 +219,13 @@ namespace LazyJedi.SevenZip
             }
         }
 
+        /// <summary>
+        /// Create a Non-Encrypted Archive.
+        /// </summary>
+        /// <param name="outArchive">Path of the Archive that will be Created</param>
+        /// <param name="inFiles">List of Files and Folders to Archive</param>
+        /// <param name="archiveFormat">Format of the Archive that will be created.</param>
+        /// <param name="compressionLevel">Level of the Compression, by Default the Compression is set to Default.</param>
         public static async Task ArchiveAsync(
             string outArchive,
             string[] inFiles,
@@ -242,6 +255,15 @@ namespace LazyJedi.SevenZip
             }
         }
 
+        /// <summary>
+        /// Create an Encrypted Archive.
+        /// </summary>
+        /// <param name="outArchive">Path of the Archive that will be Created</param>
+        /// <param name="inFiles">List of Files and Folders to Archive</param>
+        /// <param name="password">Password for the Encryption</param>
+        /// <param name="encryptHeaders">Encrypt the Filenames</param>
+        /// <param name="encryptionMethod">Type of encryption to Apply</param>
+        /// <param name="compressionLevel">Level of the Compression, by Default the Compression is set to Default.</param>
         public static async Task ArchiveAsync(
             string outArchive,
             string[] inFiles,
@@ -272,6 +294,16 @@ namespace LazyJedi.SevenZip
             }
         }
 
+        /// <summary>
+        /// Create an Encrypted Archive.
+        /// </summary>
+        /// <param name="outArchive">Path of the Archive that will be Created</param>
+        /// <param name="inFiles">List of Files and Folders to Archive</param>
+        /// <param name="password">Password for the Encryption</param>
+        /// <param name="archiveFormat">Format of the Archive (.7z, .zip, etc)</param>
+        /// <param name="encryptHeaders">Encrypt the Filenames</param>
+        /// <param name="encryptionMethod">Type of encryption to Apply</param>
+        /// <param name="compressionLevel">Level of the Compression, by Default the Compression is set to Default.</param>
         public static async Task ArchiveAsync(
             string outArchive,
             string[] inFiles,

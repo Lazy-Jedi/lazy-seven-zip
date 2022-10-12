@@ -1,4 +1,5 @@
 # Lazy Seven Zip
+
 Lazy Seven Zip is a wrapper for the popular [SevenZipSharp](https://github.com/squid-box/SevenZipSharp) library.<br>
 It provides an easy to use set of methods to easily create and extract archives in Unity within the Editor or at
 Runtime.
@@ -10,15 +11,14 @@ This library does not include creating or extracting archives via Stream.
 
 ## Lazy Archive Class
 
-The Lazy Archive Wrapper Class consists of 4 Archive methods, 2 Synchronous and 2 Asynchronous methods.<br>
-This allows you to create standard or encrypted archives easily.
+The Lazy Archive Wrapper Class consists of 4 methods, 2 Synchronous and 2 Asynchronous methods.<br>
+This allows you to create standard or encrypted archives using the Files and Folders in your current Unity Project.
 
 The methods in the class are shown below.
 
-### Synchronous
+### Synchronous Methods
 
 ```csharp
-
 public static void Archive(string outArchive, 
                            string[] inFiles, 
                            OutArchiveFormat archiveFormat, 
@@ -26,7 +26,11 @@ public static void Archive(string outArchive,
 {
 ...
 }
+```
 
+<br>
+
+```csharp
 public static void Archive(string outArchive,
                            string[] inFiles,
                            string password,
@@ -37,26 +41,24 @@ public static void Archive(string outArchive,
 {
 ...
 }
-
 ```
 
-## Lazy Extractor Class
-
-
-
-### Asynchronous
+### Asynchronous Methods
 
 ```csharp
-
-public static async Task ArchiveAsync(string outArchive, 
+public static async Task Archive(string outArchive, 
                            string[] inFiles, 
                            OutArchiveFormat archiveFormat, 
                            CompressionLevel compressionLevel = CompressionLevel.Normal)
 {
 ...
 }
+```
 
-public static async Task ArchiveAsync(string outArchive,
+<br>
+
+```csharp
+public static async Task Archive(string outArchive,
                            string[] inFiles,
                            string password,
                            OutArchiveFormat archiveFormat,
@@ -66,10 +68,35 @@ public static async Task ArchiveAsync(string outArchive,
 {
 ...
 }
+```
 
+## Lazy Extractor Class
+
+The Lazy Extractor Wrapper Class consists of 2 Extraction methods, 1 Synchronous and 1 Asynchronous method.<br>
+This allows you to extract standard or encrypted archives anywhere within the Unity Editor or on your Local Machine.
+
+The methods in the class are shown below.
+
+### Synchronous
+
+```csharp
+public static void Extract(string outPath, string inArchive, string password = "")
+{
+...
+}
+```
+
+### Asynchronous
+
+```csharp
+public static async Task ExtractAsync(string outPath, string inArchive, string password = "")
+{
+...
+}
 ```
 
 ## Examples - Creating an Archive
+
 ### Method 1 - Archive no Password
 
 ```csharp
@@ -102,7 +129,8 @@ public async Task ArchiveTestAsync(string password, string[] filesToArchive)
 
 ```
 
-## Extracting an Archive
+# Work In Progress
++ Editor Window to Create Archives similar to the 7zip Archive Creator Window
 
 # Credits
 
