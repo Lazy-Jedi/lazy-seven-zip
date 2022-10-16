@@ -331,8 +331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 0
-  archivePath: Assets/files.7z
-  ActionType: 0
+  ArchivePath: Assets/files.7z
+  Password: 1234
+  ActionType: 1
   FilesAndFolders:
   - Assets/Tools/Artwork
   - Assets/Tools/Artwork/9Sliced.png
